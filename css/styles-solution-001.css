@@ -1,4 +1,4 @@
-<!-- ========================================================================
+<!-- 
 
 7. You must implement the following breakpoints that will be considered desktop, tablet, and mobile. 
 The browser should display a desktop version of the site when the width of the browser window is 992px and above. 
@@ -23,69 +23,27 @@ For a visual reference of this view, see the mobile mockup illustration below.
 
 
 
-13 Spacing: Pay attention to the spacing shown in the mockup illustrations. 
-Note the spacing between sections (both horizontal and vertical). 
-Note the horizontal spacing between the edges of the section and the edges of 
-the browser window. 
-Also, note the spacing between the dummy text in each section and the edges of the section. 
-Lastly, make sure the dummy text is "pushed down" enough so it doesn't overlap the section 
-title region. (Hint: use margins and padding and use border-box as your box-sizing as 
-  discussed in Lecture 19.)
+13 Spacing: Pay attention to the spacing shown in the mockup illustrations. Note the spacing between sections (both horizontal and vertical). Note the horizontal spacing between the edges of the section and the edges of the browser window. Also, note the spacing between the dummy text in each section and the edges of the section. Lastly, make sure the dummy text is "pushed down" enough so it doesn't overlap the section title region. (Hint: use margins and padding and use border-box as your box-sizing as discussed in Lecture 19.)
 
-14 Borders and Colors: Each section should have a background color set to 
-some color (of your choosing). Set the background color of each section title region to 
-some unique color (of your choosing). Make sure that the background color still allows the 
-user to view the text in the section and section title regions. Depending on the color you 
-choose, you may want to change the color of the text so it can be easy to read. Set a black 
-border on both the section and section title region that is 1px thick. Warning: While not 
-specifying borders and colors according to the requirements does not hurt your grade so much, 
-not doing so will make it much harder for your classmates to peer grade the rest of your 
-assignment, possibly resulting in a much lower grade.
+14 Borders and Colors: Each section should have a background color set to some color (of your choosing). Set the background color of each section title region to some unique color (of your choosing). Make sure that the background color still allows the user to view the text in the section and section title regions. Depending on the color you choose, you may want to change the color of the text so it can be easy to read. Set a black border on both the section and section title region that is 1px thick. Warning: While not specifying borders and colors according to the requirements does not hurt your grade so much, not doing so will make it much harder for your classmates to peer grade the rest of your assignment, possibly resulting in a much lower grade.
 
-15 (OPTIONAL) You will NOT be graded on this, but you may want to explicitly 
-set a font-family for the text in your page, so you are not stuck with the default 
-browser font family. Also, set the font size of the heading and section title to be 75% 
-larger and 25% larger (respectively) than the font size of the dummy text.
+15 (OPTIONAL) You will NOT be graded on this, but you may want to explicitly set a font-family for the text in your page, so you are not stuck with the default browser font family. Also, set the font size of the heading and section title to be 75% larger and 25% larger (respectively) than the font size of the dummy text.
 
 
-======================================================================== -->
+-->
 
-/********** Base styles **********/
-* {
-  box-sizing: border-box;
-  font-family: Helvetica;
+#outer {   /* outer box */
 }
-
-h1 {
-  margin-bottom: 60px;
+#outer #inner {  /* inner box */
+  width: 34%;
+  position: relative;
+  /* top: 44px; */
+  /*right: -100%; */
+  transform: translate(187%, 30px); 
   text-align: center;
-}
-
-.menu {
-    border: 3px solid black;
-    background: #999999;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 10px;
-}
-
-
-.menu-label {
-  border: 2px solid black;
-  width: 40%;
-  height: 30px;
-  margin-top: -2px;
-  margin-left: 59.5%;
   font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.menu-text {
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  color: black;
+  font-family: Helvetica;
+  border: 2px solid black; 
 }
 
 .chicken {
@@ -101,15 +59,36 @@ h1 {
   background: #E2D19B;
 }
 
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+  border: 3px solid black;
+  background-color: #999999;
+  width: 95%;
+  /* height: 150px; */
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 35px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-family: Helvetica;
+  color: black;
+}
 
 /* Simple Responsive Framework. */
 .row {
   width: 100%;
 }
 
-
-/********** "Desktop" Large devices only **********/
-@media (min-width: 992px) {
+/********** Large devices only **********/
+@media (min-width: 1200px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
@@ -151,8 +130,8 @@ h1 {
   }
 }
 
-/********** "Tablet" Medium devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
